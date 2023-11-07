@@ -1,0 +1,6 @@
+Day-8
+terraform plan -generate-confit-out=generated_resource.tf // for generating instance information to new file
+terraform import aws_instance.example instance_id_here // for copying all the information through terraform command
+
+day-6
+terraform workspace select dev
