@@ -4,3 +4,6 @@ terraform import aws_instance.example instance_id_here // for copying all the in
 
 day-6
 terraform workspace select dev
+
+Ansible
+ansible-galaxy role kubernetes // for creating  template for efficent configuration of large project using ansible role command
