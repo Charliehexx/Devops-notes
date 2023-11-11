@@ -7,3 +7,27 @@ terraform workspace select dev
 
 Ansible
 ansible-galaxy role init kubernetes // for creating  template for efficent configuration of large project using ansible role command
+
+
+DockerFile commands
+
+run: This command creates and runs a new Docker container.
+add: This command adds files or directories to a Docker image.
+copy: This command copies files or directories from a host machine to a Docker image.
+cmd: This command specifies the command that will be run when the Docker container starts.
+entrypoint: This command specifies the entrypoint for the Docker container. The entrypoint is the command that will be run when the Docker container starts, even if a command is specified with the cmd command.
+workdir: This command specifies the working directory for the Docker container. The working directory is the directory that will be used when the Docker container starts.
+label: This command adds a label to a Docker image. Labels are key-value pairs that can be used to store metadata about a Docker image.
+env: This command sets an environment variable for a Docker container. Environment variables are variables that can be used to configure the behavior of a Docker container.
+maintainer: This command specifies the maintainer of a Docker image. The maintainer is the person who is responsible for the Docker image.
+
+
+ARG is used to define a build-time variable NGINX_VERSION that can be overridden during the build process.
+FROM sets the base image as the specified Nginx version.
+ADD copies the index.html file from the build context to the /usr/share/nginx/html directory inside the container.
+WORKDIR sets the working directory inside the container to /usr/share/nginx/html.
+CMD sets the default command for the container to start Nginx and keep it running in the foreground.
+EXPOSE specifies that the container will listen on port 80.
+MAINTAINER sets the author/maintainer information for the image.
+LABEL adds metadata to the image, in this case, a description for the image.
+ENV sets the environment variable APP_VERSION with the value 1.0.
