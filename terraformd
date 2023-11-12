@@ -31,3 +31,8 @@ EXPOSE specifies that the container will listen on port 80.
 MAINTAINER sets the author/maintainer information for the image.
 LABEL adds metadata to the image, in this case, a description for the image.
 ENV sets the environment variable APP_VERSION with the value 1.0.
+
+
+//Installing Kubernetes cluster on EC2 instance using kubernetes Operators. On AWS which uses S3 bucket as a resource to manage  the configuration of cluster (Hero How to manage hundreds of kubernetes cluster)
+
+kops create cluster --name=demok8scluster.k8s.local --state=s3://kops-abhi-storage --zones=us-east-1a --node-count=1 --node-size=t2.micro --master-size=t2.micro  --master-volume-size=8 --node-volume-size=8
